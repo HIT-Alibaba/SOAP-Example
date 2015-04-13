@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Weather Report</title>
+</head>
+<body>
+<div class="content">
+<h2>天气预报</h2>
+<h3>全国</h3>
+    <ul>
+{% for p in province %}
+    <li><a href="/getCity/{{ p }}"> {{ p }}</a>
+    </li>
+{% endfor %}
+</ul>
+</body>
+</div>
+</html>
